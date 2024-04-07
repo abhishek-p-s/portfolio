@@ -16,7 +16,7 @@ function Footer() {
                 className="input input-bordered w-full"
               />
             </div>
-            <div className="ml-5 mt-4 md:mt-0 w-full">
+            <div className="md:ml-5 mt-4 md:mt-0 w-full">
               <input
                 type="email"
                 placeholder="Email"
