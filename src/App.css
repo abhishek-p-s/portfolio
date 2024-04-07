@@ -3,6 +3,10 @@
   src: url("./assets/fonts/Sacramento-Regular.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .home-banner {
   background-color: #41b0bf;
   padding-bottom: 70px;

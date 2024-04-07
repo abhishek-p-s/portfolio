@@ -47,8 +47,8 @@ const QuoteSlider = () => {
           navigation={true}
           scrollbar={{ draggable: true }}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          loop={true}
+          autoplay={{ delay: 2000 }}
         >
           {quotesData.map((quote, index) => (
             <SwiperSlide key={index}>
