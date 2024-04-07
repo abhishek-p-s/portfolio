@@ -19,6 +19,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ReactGA from "react-ga";
 
 const TEXTS = ["Web Developer", "Mobile Developer", "Voyager"];
 
@@ -37,6 +38,18 @@ function App() {
     return () => clearTimeout(intervalId);
   }, []);
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
+  const handleResumeClick = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Click",
+      label: "Download Resume Button",
+    });
+  };
+
   return (
     <Fragment>
       <div className="home-banner">
@@ -47,7 +60,7 @@ function App() {
               Abhishek P S
             </p>
             <br />
-            <p className="text-4xl mt-4 flex justify-center">
+            <p className="md:text-4xl text-2xl mt-4 flex justify-center">
               I am a
               <span className="mx-2 font-bold">
                 <TextTransition springConfig={presets.stiff}>
@@ -156,7 +169,7 @@ function App() {
       <div className="text-center mt-[3rem] mb-5">
         <h2 className="text-4xl font-thin">Download my Resume</h2>
         <div className="w-[5rem] mx-auto hover:scale-110 cursor-pointer">
-          <a href={Resume} download>
+          <a href={Resume} download onClick={handleResumeClick}>
             <img src={DownloadIcon} alt="" />
           </a>
         </div>
@@ -266,7 +279,7 @@ function App() {
                   className="input input-bordered w-full"
                 />
               </div>
-              <div className="md:mx-5 mt-4 md:mt-0 w-full">
+              <div className="ml-5 mt-4 md:mt-0 w-full">
                 <input
                   type="email"
                   placeholder="Email"
