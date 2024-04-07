@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Sacramento";
+  src: url("./assets/fonts/Sacramento-Regular.ttf") format("truetype");
+}
+
+.home-banner {
+  background-color: #41b0bf;
+  padding-bottom: 70px;
+  position: relative;
+  border-right: 20px solid #fff;
+  border-left: 20px solid #fff;
+  border-top: 20px solid #fff;
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .home-banner {
+    background: url(./assets/clouds.png) repeat-x top center;
+    background-size: contain;
+    background-repeat: repeat;
+  }
+}
