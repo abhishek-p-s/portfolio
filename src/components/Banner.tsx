@@ -37,7 +37,7 @@ const Banner = () => {
             href="#chatWithMe"
             className="btn bg-[#41b0bf] text-white rounded-full"
           >
-            Chatt with me
+            Chat with me
           </a>
         </section>
       </div>
