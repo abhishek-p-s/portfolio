@@ -35,7 +35,7 @@ function Footer() {
 
   return (
     <div className="mt-5 p-5" id="chatWithMe">
-      <h1 className="text-4xl text-center font-thin">Chatt with me</h1>
+      <h1 className="text-4xl text-center font-thin">Chat with me</h1>
       <p className="text-center text-gray-400 mt-5 text-xl">
         I am always excited to work on some awesome projects, message me and
         let's discuss over a coffee.
